@@ -6,8 +6,15 @@ documentation : apache official : https://kafka.apache.org/
 1. Kafka Broker
 2. Kafka Client
 3. Kafka connect
+- Worker
+- Connecttor
+- Task
 4. Kafka Streams
+- What is Real-time Stream Processing ?
+- What is Kafka ?
+- Kafka Streams Architecture ?
 5. KSQL
+- KSQL is SQL interface to Kafka Streams  
 
 
 Apache Kafka Core Concepts :
