@@ -60,6 +60,7 @@ for create topic with partition need check :
 - Parallel Processing Requirement
 
 - sending data file using kafka-console-producer
-command : bin/./kafka-console-producer --topic test --broker-list localhost:9092
+command : bin/./kafka-console-producer --topic test --broker-list localhost:9092 < ../data.txt
 2. Reading Kafka Topic
 - Using kafka-console-consumer
+command : bin/./kafka-console-consumer --topic test --bootstrap-server localhost:9092 --from-beginning
