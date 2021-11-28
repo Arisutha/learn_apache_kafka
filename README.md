@@ -26,3 +26,5 @@ Apache Kafka Core Concepts :
 6. Parititions
 7. Offset
 8. Consumer Groups
+
+apache spark for handling data lake
