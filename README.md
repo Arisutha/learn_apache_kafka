@@ -38,8 +38,28 @@ apache spark for handling data lake
 * Using Consumer Group
 
 
+* Started kafka
 1. run zookeeper 
 command : 'bin/./zookeeper-server-start etc/kafka/zookeeper.properties'
 apache zookeeper is database
 2. started kafka broker
 command : 'bin/./kafka-server-start etc/kafka/server.properties'
+
+
+* create producer and consumer
+1. Sending Data FIle to Kafka
+- Create Topic using kafka-topics
+command : bin/./kafka-topics --create --topic test --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+
+
+replication-factor is the number of copy of each partition
+need to tell the cluster coordinates this command 
+
+for create topic with partition need check :
+- Storage Requirement
+- Parallel Processing Requirement
+
+- sending data file using kafka-console-producer
+command : bin/./kafka-console-producer --topic test --broker-list localhost:9092
+2. Reading Kafka Topic
+- Using kafka-console-consumer
