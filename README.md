@@ -28,3 +28,18 @@ Apache Kafka Core Concepts :
 8. Consumer Groups
 
 apache spark for handling data lake
+
+* Installing Single Node kafka Cluster
+1. Open Source - Apache Kafka
+2. Commercial Distribution - confluent.io (using community edition)
+3. Managed Service - confluent, amazonm aiven.io
+* Using Producer and Consumer
+* Installing Multi-Node Kafka Cluster
+* Using Consumer Group
+
+
+1. run zookeeper 
+command : 'bin/./zookeeper-server-start etc/kafka/zookeeper.properties'
+apache zookeeper is database
+2. started kafka broker
+command : 'bin/./kafka-server-start etc/kafka/server.properties'
