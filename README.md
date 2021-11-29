@@ -29,7 +29,7 @@ Apache Kafka Core Concepts :
 
 apache spark for handling data lake
 
-* Installing Single Node kafka Cluster
+# Installing Single Node kafka Cluster
 1. Open Source - Apache Kafka
 2. Commercial Distribution - confluent.io (using community edition)
 3. Managed Service - confluent, amazonm aiven.io
@@ -38,8 +38,8 @@ apache spark for handling data lake
 * Using Consumer Group
 
 
-* Started kafka
-1. run zookeeper 
+# Started kafka
+1. start zookeeper 
 command : 'bin/./zookeeper-server-start etc/kafka/zookeeper.properties'
 apache zookeeper is database
 2. started kafka broker
@@ -55,7 +55,7 @@ command : bin/./kafka-topics --create --topic test --partitions 1 --replication-
 replication-factor is the number of copy of each partition
 need to tell the cluster coordinates this command 
 
-for create topic with partition need check :
+for create topic with partition need check :   
 - Storage Requirement
 - Parallel Processing Requirement
 
@@ -64,3 +64,22 @@ command : bin/./kafka-console-producer --topic test --broker-list localhost:9092
 2. Reading Kafka Topic
 - Using kafka-console-consumer
 command : bin/./kafka-console-consumer --topic test --bootstrap-server localhost:9092 --from-beginning
+
+
+# Installing Multi-Node Cluster
+- make copy **server.properties** to three file : rename to server-0.properties, server-1.properties, server-2.properties
+- change broker id for each file
+- config Listeners
+- run zookeeper
+- run kafka broker
+first node : bin/./kafka-server-start etc/kafka/server-0.properties
+second node : bin/./kafka-server-start etc/kafka/server-1.properties
+third node : bin/./kafka-server-start etc/kafka/server-2.properties
+
+# Using consumer group
+1. first consumer
+- Create Topic with 3 partition
+command : bin/./kafka-topics --create --topic stock-lists --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
+- create 2 consumer
+bin/./kafka-console-consumer --topic stock-lists --bootstrap-server localhost:9092 --from-beginning --group group1
+- create producer
