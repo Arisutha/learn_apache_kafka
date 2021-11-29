@@ -83,3 +83,5 @@ command : bin/./kafka-topics --create --topic stock-lists --partitions 3 --repli
 - create 2 consumer
 bin/./kafka-console-consumer --topic stock-lists --bootstrap-server localhost:9092 --from-beginning --group group1
 - create producer
+
+# Configuring your development IDE
