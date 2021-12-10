@@ -1,0 +1,1 @@
+%KAFKA_HOME%\bin\zooker-server-start.sh %KAFKA_HOME%\etc\kafka\zookeeper.properties
