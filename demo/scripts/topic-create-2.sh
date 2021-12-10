@@ -1,1 +1,1 @@
-$KAFKA_HOME/bin/kafka-topics --create --topic invoice --partitions 5 --replication-factor 1 --bootstrap-server localhost:9092
+$KAFKA_HOME/bin/kafka-topics --create --topic invoice2 --partitions 5 --replication-factor 3 --bootstrap-server localhost:9092

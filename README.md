@@ -85,3 +85,17 @@ bin/./kafka-console-consumer --topic stock-lists --bootstrap-server localhost:90
 - create producer
 
 # Configuring your development IDE
+- using confluent
+- using intellij idea
+
+1. create kafka log configuration
+/tmp/kafka-logs-0
+/tmp/kafka-logs-1
+/tmp/kafka-logs-2
+2. set KAFKA_HOME
+
+for mac : sudo nano .zshrc
+export KAFKA_HOME=/Users/sutam/Documents/tools/confluent-7.0.0
+export PATH=$PATH:$KAFKA_HOME/bin
+
+verify : echo $KAFKA_HOME
