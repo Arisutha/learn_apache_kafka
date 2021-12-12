@@ -3,6 +3,10 @@ learning apache kafka
 
 documentation : apache official : https://kafka.apache.org/
 
+- Topic Name
+- Partitiion Number
+- Offset Number
+
 1. Kafka Broker
 2. Kafka Client
 3. Kafka connect
@@ -99,3 +103,4 @@ export KAFKA_HOME=/Users/sutam/Documents/tools/confluent-7.0.0
 export PATH=$PATH:$KAFKA_HOME/bin
 
 verify : echo $KAFKA_HOME
+
